@@ -12,7 +12,7 @@ class Book {
     private @Id @GeneratedValue Long id;
     private String title;
     private String text;
-
+    private String creationDate;
     public Book() {}
 
     public Book(String title, String text) {
@@ -42,6 +42,14 @@ class Book {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public String getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(String creationDate) {
+        this.creationDate = creationDate;
     }
 
     @Override
