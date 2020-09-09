@@ -10,14 +10,19 @@ import javax.persistence.Id;
 class Book {
 
     private @Id @GeneratedValue Long id;
+    private String imageUrl;
     private String title;
     private String text;
-    private String creationDate;
+    private String price;
+    private String link;
     public Book() {}
 
-    public Book(String title, String text) {
+    public Book(String title, String text, String price, String link, String imageUrl) {
+        this.imageUrl = imageUrl;
         this.title = title;
         this.text = text;
+        this.price = price;
+        this.link = link;
     }
 
     public Long getId() {
@@ -26,6 +31,14 @@ class Book {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public String getTitle() {
@@ -44,12 +57,20 @@ class Book {
         this.text = text;
     }
 
-    public String getCreationDate() {
-        return creationDate;
+    public String getPrice() {
+        return price;
     }
 
-    public void setCreationDate(String creationDate) {
-        this.creationDate = creationDate;
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 
     @Override
@@ -70,6 +91,13 @@ class Book {
 
     @Override
     public String toString() {
-        return "Book{" + "id=" + this.id + ", title='" + this.title + '\'' + ", role='" + this.text + '\'' + '}';
+        return "Book{" +
+                "id=" + id +
+                ", imageUrl='" + imageUrl + '\'' +
+                ", title='" + title + '\'' +
+                ", text='" + text + '\'' +
+                ", price='" + price + '\'' +
+                ", link='" + link + '\'' +
+                '}';
     }
 }
