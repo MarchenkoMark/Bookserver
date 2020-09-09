@@ -13,11 +13,11 @@ class Book {
     private String imageUrl;
     private String title;
     private String text;
-    private String price;
+    private int price;
     private String link;
     public Book() {}
 
-    public Book(String title, String text, String price, String link, String imageUrl) {
+    public Book(String title, String text, int price, String link, String imageUrl) {
         this.imageUrl = imageUrl;
         this.title = title;
         this.text = text;
@@ -57,11 +57,11 @@ class Book {
         this.text = text;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 

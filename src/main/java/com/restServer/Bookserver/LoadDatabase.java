@@ -15,11 +15,11 @@ class LoadDatabase {
     CommandLineRunner initDatabase(BookRepository repository) {
 
         return args -> {
-            log.info("Preloading " + repository.save(new Book("Java Core", "Core Java, Eleventh Edition, is the definitive guide to writing robust, maintainable code.", "$50", "https://eloquentjavascript.net", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fvk.com%2Fwall-54530371_235840&psig=AOvVaw1bOXxvA-Y6NLYR2erhE5sE&ust=1599736594323000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIChmK_52-sCFQAAAAAdAAAAABAD")));
-            log.info("Preloading " + repository.save(new Book("FEYNMAN", "Legendary lectures", "$20", "https://www.google.com.ua/?hl=ru", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fvk.com%2Fwall-54530371_235840&psig=AOvVaw1bOXxvA-Y6NLYR2erhE5sE&ust=1599736594323000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIChmK_52-sCFQAAAAAdAAAAABAD")));
-            log.info("Preloading " + repository.save(new Book("HAWKING", "Everything about time", "$35", "https://www.google.com.ua/?hl=ru", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fvk.com%2Fwall-54530371_235840&psig=AOvVaw1bOXxvA-Y6NLYR2erhE5sE&ust=1599736594323000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIChmK_52-sCFQAAAAAdAAAAABAD")));
-            log.info("Preloading " + repository.save(new Book("LANDAU", "Best formulae book", "$10", "https://www.google.com.ua/?hl=ru", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fvk.com%2Fwall-54530371_235840&psig=AOvVaw1bOXxvA-Y6NLYR2erhE5sE&ust=1599736594323000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIChmK_52-sCFQAAAAAdAAAAABAD")));
-            log.info("Preloading " + repository.save(new Book("ELOQUENT JAVASCRIPT", "Legendary lectures", "$00", "https://www.google.com.ua/?hl=ru", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fvk.com%2Fwall-54530371_235840&psig=AOvVaw1bOXxvA-Y6NLYR2erhE5sE&ust=1599736594323000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIChmK_52-sCFQAAAAAdAAAAABAD")));
+            log.info("Preloading " + repository.save(new Book("Java Core", "Core Java, Eleventh Edition, is the definitive guide to writing robust, maintainable code.", 50, "https://eloquentjavascript.net", "/assets/img/java.jpg")));
+            log.info("Preloading " + repository.save(new Book("FEYNMAN", "Legendary lectures", 20, "https://www.google.com.ua/?hl=ru", "/assets/img/feynman.jpg")));
+            log.info("Preloading " + repository.save(new Book("HAWKING", "Everything about time", 35, "https://www.google.com.ua/?hl=ru", "/assets/img/hoking.jpg")));
+            log.info("Preloading " + repository.save(new Book("LANDAU", "Best formulae book", 10, "https://www.google.com.ua/?hl=ru", "/assets/img/landau.jpg")));
+            log.info("Preloading " + repository.save(new Book("ELOQUENT JAVASCRIPT", "Legendary lectures", 0, "https://www.google.com.ua/?hl=ru", "/assets/img/javascript.jpg")));
         };
     }
         /*
