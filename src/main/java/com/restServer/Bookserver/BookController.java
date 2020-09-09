@@ -24,14 +24,18 @@ public class BookController {
     }
 
     @GetMapping("/books")
-    CollectionModel<EntityModel<Book>> all() {
+    /*CollectionModel<EntityModel<Book>>*/ List<Book> all() {
 
-        List<EntityModel<Book>> books = repository.findAll().stream()
+        /* List<EntityModel<Book>> books = repository.findAll().stream()
                 .map(assembler::toModel)
                 .collect(Collectors.toList());
 
         return CollectionModel.of(books,
                 linkTo(methodOn(BookController.class).all()).withSelfRel());
+
+         */
+
+        return repository.findAll();
     }
 
     @PostMapping("/books")
