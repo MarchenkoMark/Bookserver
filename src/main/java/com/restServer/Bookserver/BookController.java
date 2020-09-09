@@ -23,6 +23,7 @@ public class BookController {
         this.assembler = assembler;
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/books")
     /*CollectionModel<EntityModel<Book>>*/ List<Book> all() {
 
