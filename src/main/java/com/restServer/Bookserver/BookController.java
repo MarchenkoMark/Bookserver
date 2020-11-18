@@ -1,16 +1,10 @@
 package com.restServer.Bookserver;
 
-
-import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.IanaLinkRelations;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-import java.util.stream.Collectors;
-
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @RestController
 public class BookController {
@@ -23,11 +17,11 @@ public class BookController {
         this.assembler = assembler;
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @GetMapping("/books")
-    /*CollectionModel<EntityModel<Book>>*/ List<Book> all() {
+    List<Book> all() { /*CollectionModel<EntityModel<Book>> all() {
 
-        /* List<EntityModel<Book>> books = repository.findAll().stream()
+        List<EntityModel<Book>> books = repository.findAll().stream()
                 .map(assembler::toModel)
                 .collect(Collectors.toList());
 
